@@ -13,7 +13,8 @@ console.log("variable con let");
 console.log(y);
 
 //otra forma de definir una variable es con const
-const z = 3.14
+const Z = 3.14
 console.log("");
 console.log("constante");
-console.log(z);
+console.log(z);//al darle un valor ya no se podria ni incrementar ni nada, las constantes se escriben en mayusculas
+
