@@ -8,9 +8,13 @@
 </head>
 <body>
     <script>
+        //la forma correcta seria seria if(isNaN(result)){
+            //no es un numero
+       // }else{ .........}
         //Como sabes el let es "lets meter una variable" || result es una variable
-
         let result = prompt("Pon un número:");
+
+        //comparamos el resultado con el infinito, no funciona cuando se compara con infinity
         if(result <= Infinity){
             alert("el número que has introducido es "+ result);
         }else{
@@ -18,4 +22,4 @@
         }
     </script>
 </body>
-</html>
+</html> 
