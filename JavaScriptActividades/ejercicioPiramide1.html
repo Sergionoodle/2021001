@@ -4,12 +4,17 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Triangulo de asteriscos</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
     <script>
         var resultado = prompt("Dime un número de asteriscos y te hago una piramide:");
 
-        while(resultado < 0){
+        while(resultado < 0 || isNaN(Number(resultado))){
             alert("Pon un numero positivo");
             var resultado = prompt("Dime un número de asteriscos y te hago una piramide:");
         }
@@ -17,7 +22,7 @@
         for(var i = 0; i < resultado; i++){
 
             for(var x= 0; x <= i; x++){
-                document.write("*");
+                document.write("<span>*</span>");
             }
             for(var z = 0; z < resultado; z++){
             }
