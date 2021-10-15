@@ -16,7 +16,7 @@ while(Number(resultado)){
     }
     
     else if(resultado == numeroAleatorio){
-        alert("HAS CERTADO BONIFACIO ;D te costó "+ contador+" intentos");
+        alert("HAS ACERTADO BONIFACIO ;D te costó "+ contador+" intentos");
         break;
     }
 
