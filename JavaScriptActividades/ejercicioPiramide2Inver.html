@@ -10,28 +10,28 @@
         }
     </style>
 </head>
-<center><!--para que el triangulo este invertido-->
 <body>
-    <r>
+    
     <script>
-        var resultado = prompt("Dime un número de asteriscos y te hago una piramide:");
+     var respuesta;
 
-        while(resultado < 0|| isNaN(Number(resultado))){
-            alert("Pon un numero positivo");
-            var resultado = prompt("Dime un número de asteriscos y te hago una piramide:");
-        }
 
-        for(var i = 0; i < resultado; i++){
+do {
+    respuesta = prompt("Escribe el número de asteriscos que deseas " +
+    "(debe ser un número entero positivo)");
 
-            for(var x= 0; x < resultado - i; x++){
-                document.write("<span>*</span>");
-            }
-            for(var z = 0; z < resultado; z++){
-            }
-            document.write("<br>");
-        }
+} while (isNaN(Number(respuesta)) || respuesta < 0);
+
+for (let i=respuesta; i>0; i--) {
+    for (let j=i; j<=respuesta-1; j++) {
+        document.write("&nbsp;");
+    }
+    for (let j=1; j<=i; j++) {
+        document.write("* ");
+    }  
+    document.write("<br>");
+}
     </script>
 
 </body>
-</center>
 </html>
