@@ -25,16 +25,14 @@
 
 
         for (var i = 0; i < respuest.length; i++) {
-            //recorremos el texto con un bucle contador
-            numero = respuest.charCodeAt(i) + numero;
-            //aqui hacemos que el numero sea igual a 
-            //el nombre que con charcode (el numero que recorrera de mientras)
-            // mas el numero de cifrado
 
+            numero = respuest.charCodeAt(i) + Number(clave.charAt(cont));
             document.write(String.fromCharCode(numero));
-            //y aqui como bien sabes lo que hacemos es escribir en el 
-            //documento una palabra que cambie el numero(que es la variable de antes)
-            //por sus correspondientes codigos de unicode 
+
+
+            if (cont == numero.length) {
+                cont = 0;
+            }
 
         }
     </script>
