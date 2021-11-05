@@ -18,3 +18,6 @@ for (var i = 0; i < 500; i++) {
 
 
 }
+
+//funcion flecha -->
+//const par = (x) => (x%2 == 0) ? "par" : "impar"; -->
