@@ -10,7 +10,25 @@
 
 <body>
     <script>
-        function
+        function primos(numero) {
+
+            if (numero < 1) return false;
+
+            if (numero == 1) return true;
+
+            for (let i = 2; i * i <= numero; i++) {
+                if (numero % i == 0) return false;
+            }
+            return true;
+
+        }
+
+        for (i = 3; i < 1000; i += 2) {
+
+            if (primos(i)) {
+                document.write(i + '<br>');
+            }
+        }
     </script>
 </body>
 
