@@ -10,28 +10,41 @@
 
 <body>
     <script>
-        let palabrasArray = []; //creo una array
-        const setPalabras = new Set(); //creo una constante
-        //para poder asignar las palabras
+        function map(array) {
+            const mapa = new Map()
+            let num
 
-        const claves = new Map();
-        var contador = 1;
+            array.forEach(element => {
+                if (mapa.has(element)) {
+                    num = mapa.get(element) + 1
+                    mapa.set(element, num)
+                } else {
+                    mapa.set(element, 1)
+                }
+            });
 
-        var palabras = prompt("Escribe palabras:");
-        while (palabras != null && palabras != "") {
-            setPalabras.add(palabras); //añado lo del prompt
-            var palabras = prompt("Escribe palabras:");
+            return mapa
         }
 
-        palabrasArray = [...setPalabras]; //meto lo añadido en la array
+        let contador = 0
+        let array = []
+        let size
+        let resultado
 
-        document.write(palabrasArray);
+        do {
+            txt = prompt("Introduce una palabra")
+            if (txt != "" && txt != null) {
+                array[contador] = txt
+                contador++
+            }
 
-        for (var i = 0; i < palabrasArray.length; i++) {
-            claves.set(palabrasArray[i], contador);
-            contador++;
-            document.write(claves)
+        } while (txt != null && txt != "")
 
+        size = map(array).size;
+        resultado = map(array).entries();
+
+        for (let i = 0; i < size; i++) {
+            document.write("<p>" + resultado.next().value + "</p>")
         }
     </script>
 </body>
